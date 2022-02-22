@@ -18,10 +18,9 @@ public class BJ_후위표기식 {
 
 	}
 	private static void prefix(String str) {
-		// TODO Auto-generated method stub
 		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < str.length(); i++) {
-			char now = str.charAt(i);
+			char now = str.charAt(i); 
 			switch (now) {
 			case '+':
 			case '-':
