@@ -29,7 +29,7 @@ public class N°úM4 {
 	}
 	private static void comb(int srcIdx, int tgtIdx) {
 		if(tgtIdx == tgt.length) {
-			srcIdx++;
+			
 			for (int i = 0; i < tgt.length; i++) {
 				System.out.print(tgt[i] + " ");
 			}
