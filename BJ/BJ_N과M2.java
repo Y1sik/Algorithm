@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class N°úM2 {
+public class BJ_N°úM2 {
 	static int N;
 	static int M;
 	static int[] tgt;
