@@ -38,7 +38,7 @@ public class BJ_이진검색트리 {
 		Node root = new Node(Integer.parseInt(br.readLine()));
 		
 		while(true) {
-			String n = br.readLine(); 
+			String n = br.readLine();
 			if(n==null||n.equals("")) break;
 			root.Insert(Integer.parseInt(n));
 		}
