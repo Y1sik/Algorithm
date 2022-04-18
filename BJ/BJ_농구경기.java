@@ -26,7 +26,7 @@ public class BJ_³ó±¸°æ±â {
 			}
 		}
 		if (!flag)
-			System.out.println("PREDAFA");
+			System.out.println("PREDAJA");
 	}
 
 }
