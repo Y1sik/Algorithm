@@ -12,9 +12,9 @@ public class BJ_인구이동 {
 	static int N, L, R;
 	static int[][] map;
 	static boolean[][] visit;
-	static int[] dx = { -1, 1, 0, 0 };
+	static int[] dx = { 1, -1, 0, 0 };
 	static int[] dy = { 0, 0, -1, 1 };
-	static ArrayList<Node> al = new ArrayList<>();
+	static ArrayList<Node> al;
 	static int result;
 
 	static class Node {
@@ -95,15 +95,15 @@ public class BJ_인구이동 {
 			for (int i = 0; i < 4; i++) {
 				int nx = now.x + dx[i];
 				int ny = now.y + dy[i];
-				if (nx < 0 || ny < 0 || nx >= N || ny >= N || visit[ny][nx]) continue;
-				int sub = Math.abs(map[now.y][now.x] - map[ny][nx]);
-				if (L < sub && sub > R) continue;
-
-				queue.offer(new Node(ny, nx));
-				al.add(new Node(ny, nx));
-				sum += map[ny][nx];
-				visit[ny][nx] = true;
-
+				if (nx >= 0 && ny >= 0 && nx < N && ny < N && !visit[ny][nx]) {
+					int sub = Math.abs(map[now.y][now.x] - map[ny][nx]);
+					if (L <= sub && sub <= R) {
+						queue.offer(new Node(ny, nx));
+						al.add(new Node(ny, nx));
+						sum += map[ny][nx];
+						visit[ny][nx] = true;
+					}
+				}
 			}
 		}
 		return sum;
